@@ -26,13 +26,16 @@ public final class RainbowMixerWorker extends Thread {
         AudioRecord record = new AudioRecord(MediaRecorder.AudioSource.MIC, 44100, AudioFormat.CHANNEL_IN_MONO,
                 AudioFormat.ENCODING_PCM_16BIT, bufferSize);
         int size = bufferSize >> 1;
-        int paddedSize = 1 << 32 - Integer.numberOfLeadingZeros(size);
-        short[] buffer = new short[paddedSize];
+        size = size < 4096 ? 4096 : 1 << 32 - Integer.numberOfLeadingZeros(size);   // always prepare enough buffer
+        short[] buffer = new short[size];
         record.startRecording();
-        int count;
-        while (!isInterrupted() && (count = record.read(buffer, 0, size)) >= 0) try {
-            if (count > 0) colorDisplay.updateColor(colorGenerate.getArgb(buffer, count), handler);
-            else Thread.sleep(16);
+        int count = 0, k;
+        while (!isInterrupted() && (k = record.read(buffer, count, size - count)) >= 0) try {
+            count += k;
+            if (count < 1837) Thread.sleep(41); else {
+                colorDisplay.updateColor(colorGenerate.getArgb(buffer, count), handler);
+                count = 0;
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
