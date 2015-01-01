@@ -13,58 +13,64 @@ ADDED from AndroidManifest.xml:2:1
 	android:versionCode
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
-uses-feature#android.hardware.microphone
+uses-feature#android.hardware.audio.low_latency
 ADDED from AndroidManifest.xml:3:5
+	android:required
+		ADDED from AndroidManifest.xml:3:69
 	android:name
 		ADDED from AndroidManifest.xml:3:19
-uses-permission#android.permission.RECORD_AUDIO
+uses-feature#android.hardware.microphone
 ADDED from AndroidManifest.xml:4:5
 	android:name
-		ADDED from AndroidManifest.xml:4:22
-uses-permission#android.permission.WAKE_LOCK
+		ADDED from AndroidManifest.xml:4:19
+uses-permission#android.permission.RECORD_AUDIO
 ADDED from AndroidManifest.xml:5:5
 	android:name
 		ADDED from AndroidManifest.xml:5:22
-application
+uses-permission#android.permission.WAKE_LOCK
 ADDED from AndroidManifest.xml:6:5
+	android:name
+		ADDED from AndroidManifest.xml:6:22
+application
+ADDED from AndroidManifest.xml:7:5
 	android:label
-		ADDED from AndroidManifest.xml:6:45
+		ADDED from AndroidManifest.xml:7:45
 	android:allowBackup
-		ADDED from AndroidManifest.xml:6:18
+		ADDED from AndroidManifest.xml:7:18
 activity#tk.mygod.rainbowmixer.app.MainActivity
-ADDED from AndroidManifest.xml:7:9
+ADDED from AndroidManifest.xml:8:9
 	android:label
-		ADDED from AndroidManifest.xml:7:48
+		ADDED from AndroidManifest.xml:8:48
 	android:name
-		ADDED from AndroidManifest.xml:7:19
+		ADDED from AndroidManifest.xml:8:19
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:8:13
+ADDED from AndroidManifest.xml:9:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:9:17
-	android:name
-		ADDED from AndroidManifest.xml:9:25
-category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:10:17
 	android:name
-		ADDED from AndroidManifest.xml:10:27
-service#tk.mygod.rainbowmixer.app.RainbowMixerService
-ADDED from AndroidManifest.xml:13:9
-	android:exported
-		ADDED from AndroidManifest.xml:13:54
+		ADDED from AndroidManifest.xml:10:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:11:17
 	android:name
-		ADDED from AndroidManifest.xml:13:18
-receiver#tk.mygod.rainbowmixer.app.NotificationDeletedHandler
+		ADDED from AndroidManifest.xml:11:27
+service#tk.mygod.rainbowmixer.app.RainbowMixerService
 ADDED from AndroidManifest.xml:14:9
 	android:exported
-		ADDED from AndroidManifest.xml:14:62
+		ADDED from AndroidManifest.xml:14:54
 	android:name
-		ADDED from AndroidManifest.xml:14:19
+		ADDED from AndroidManifest.xml:14:18
+receiver#tk.mygod.rainbowmixer.app.NotificationDeletedHandler
+ADDED from AndroidManifest.xml:15:9
+	android:exported
+		ADDED from AndroidManifest.xml:15:62
+	android:name
+		ADDED from AndroidManifest.xml:15:19
 intent-filter#tk.mygod.rainbowmixer.app.action.STOP
-ADDED from AndroidManifest.xml:15:13
+ADDED from AndroidManifest.xml:16:13
 action#tk.mygod.rainbowmixer.app.action.STOP
-ADDED from AndroidManifest.xml:16:17
+ADDED from AndroidManifest.xml:17:17
 	android:name
-		ADDED from AndroidManifest.xml:16:25
+		ADDED from AndroidManifest.xml:17:25
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 	android:targetSdkVersion
