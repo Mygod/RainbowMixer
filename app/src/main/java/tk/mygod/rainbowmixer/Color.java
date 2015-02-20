@@ -1,4 +1,4 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer;
 
 /**
  * A class for color. DUH!

@@ -1,4 +1,4 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer.generate;
 
 /**
  * Interface for generating color out of waves.

@@ -1,4 +1,4 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer.display;
 
 import android.os.Handler;
 

@@ -1,11 +1,15 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer.generate;
+
+import tk.mygod.rainbowmixer.Color;
+import tk.mygod.rainbowmixer.generate.FftGenerate;
 
 /**
- * This transformer transforms sound waves based on their frequencies to a hue rainbow which should be a little better?
+ * This transformer linearly transforms sound waves based on their frequencies to a hue rainbow,
+ * which should be a little better?
  * Test result: Apparently not.
  * @author Mygod
  */
-public class RainbowTransformer extends FftGenerate {
+public class RainbowLinearTransformer extends FftGenerate {
     @Override
     public int getArgb(int n) {
         Color color = new Color(), full = new Color();

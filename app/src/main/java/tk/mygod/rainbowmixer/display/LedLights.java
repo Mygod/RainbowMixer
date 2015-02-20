@@ -1,4 +1,6 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer.display;
+
+import tk.mygod.rainbowmixer.display.ColorDisplay;
 
 import java.io.DataOutputStream;
 import java.io.File;

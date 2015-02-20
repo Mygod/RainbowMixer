@@ -5,6 +5,10 @@ import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Handler;
+import tk.mygod.rainbowmixer.display.ColorDisplay;
+import tk.mygod.rainbowmixer.display.NotificationLights;
+import tk.mygod.rainbowmixer.generate.IColorGenerate;
+import tk.mygod.rainbowmixer.generate.RainbowBoomBox;
 
 /**
  * @author Mygod

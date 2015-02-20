@@ -1,4 +1,4 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer.display;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.widget.Toast;
+import tk.mygod.rainbowmixer.app.R;
+import tk.mygod.rainbowmixer.display.ColorDisplay;
 
 /**
  * @author Mygod

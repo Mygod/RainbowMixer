@@ -1,4 +1,7 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer.generate;
+
+import tk.mygod.rainbowmixer.Color;
+import tk.mygod.rainbowmixer.generate.IColorGenerate;
 
 /**
  * Generate color using HSL where the loudness of the wave determines dS/dt and L.

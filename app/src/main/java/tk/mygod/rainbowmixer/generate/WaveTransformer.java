@@ -1,4 +1,7 @@
-package tk.mygod.rainbowmixer.app;
+package tk.mygod.rainbowmixer.generate;
+
+import tk.mygod.rainbowmixer.Color;
+import tk.mygod.rainbowmixer.generate.FftGenerate;
 
 /**
  * This transformer transforms audible sound waves into visible light waves with some magic. :-P
