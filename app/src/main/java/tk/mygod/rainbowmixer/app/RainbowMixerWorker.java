@@ -5,10 +5,11 @@ import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Handler;
+import tk.mygod.rainbowmixer.display.ActivityDisplay;
 import tk.mygod.rainbowmixer.display.ColorDisplay;
-import tk.mygod.rainbowmixer.display.NotificationLights;
 import tk.mygod.rainbowmixer.generate.IColorGenerate;
 import tk.mygod.rainbowmixer.generate.RainbowBoomBox;
+import tk.mygod.rainbowmixer.generate.RainbowExponentialTransformer;
 
 /**
  * @author Mygod
@@ -16,10 +17,10 @@ import tk.mygod.rainbowmixer.generate.RainbowBoomBox;
 public final class RainbowMixerWorker extends Thread {
     private final Handler handler = new Handler();
     private ColorDisplay colorDisplay;
-    private IColorGenerate colorGenerate = new RainbowBoomBox(0, 0.001);
+    private IColorGenerate colorGenerate = new RainbowExponentialTransformer();//RainbowBoomBox(0, 0.001);
 
     public RainbowMixerWorker(Context context) {
-        colorDisplay = new NotificationLights(context); // new LedLights();
+        colorDisplay = new ActivityDisplay(MainActivity.instance); // new LedLights();
     }
 
     @Override
